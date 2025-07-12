@@ -1,7 +1,13 @@
 import React, { lazy } from "react";
 import bannerImg from "../assets/images/aboutus-banner.webp";
 import ourValuesBg from "../assets/images/our-values-bg.jpeg";
-import { ArrowRight, MessagesSquare, Lightbulb, Code, BookOpen } from "lucide-react";
+import {
+  ArrowRight,
+  MessagesSquare,
+  Lightbulb,
+  Code,
+  BookOpen,
+} from "lucide-react";
 import img1 from "../assets/images/aboutus-1.png";
 import img2 from "../assets/images/aboutus-2.png";
 import { Link } from "react-router-dom";
@@ -31,52 +37,57 @@ const AboutUs = () => {
               Built on Ideas. Driven by Innovation.
             </h1>
             <p className="max-w-5xl text-center text-[1.1rem]">
-              At Byteserve, we're a group of creative technologists, engineers, and digital 
-              problem-solvers who believe that smart technology can change the way businesses 
-              work for the better. We're not here to sell buzzwords or chase trends — we're 
-              here to build real, reliable solutions that move the needle.
+              At Byteserve, we're a group of creative technologists, engineers,
+              and digital problem-solvers who believe that smart technology can
+              change the way businesses work for the better. We're not here to
+              sell buzzwords or chase trends — we're here to build real,
+              reliable solutions that move the needle.
             </p>
             <ArrowLinkButton to="/contact">Contact Us</ArrowLinkButton>
           </div>
         </div>
       </section>
-      
+
       <section className="py-[5rem] bg-white">
         <div className="wrapper">
           <div className="grid md:grid-cols-2 gap-10">
             <div data-aos="fade-up">
               <h2 className="section-heading mb-6">Our Story</h2>
               <p className="mb-4 text-gray-700">
-                Every company has a beginning. Ours started with a few late nights, a shared 
-                love of clean code, and a genuine desire to build better digital experiences. 
-                We didn't want to be another agency that churns out templated software. We 
-                wanted to craft things that actually made life easier — for businesses and 
-                their customers.
+                Every company has a beginning. Ours started with a few late
+                nights, a shared love of clean code, and a genuine desire to
+                build better digital experiences. We didn't want to be another
+                agency that churns out templated software. We wanted to craft
+                things that actually made life easier — for businesses and their
+                customers.
               </p>
               <p className="text-gray-700">
-                Over the years, our team has grown, our services have expanded, and our toolbox 
-                has evolved. But our mission has stayed the same: Build thoughtfully. Solve real 
-                problems. Never settle for average.
+                Over the years, our team has grown, our services have expanded,
+                and our toolbox has evolved. But our mission has stayed the
+                same: Build thoughtfully. Solve real problems. Never settle for
+                average.
               </p>
             </div>
             <div data-aos="fade-up" className="flex items-center">
               <p className="text-gray-700 text-lg">
-                What started as a small team of passionate developers has grown into a full-service 
-                digital agency trusted by startups, mid-sized companies, and global brands. From 
-                building sleek mobile apps to powering complex backend systems, we help businesses 
-                use technology as a serious advantage — not just a nice-to-have.
+                What started as a small team of passionate developers has grown
+                into a full-service digital agency trusted by startups,
+                mid-sized companies, and global brands. From building sleek
+                mobile apps to powering complex backend systems, we help
+                businesses use technology as a serious advantage — not just a
+                nice-to-have.
               </p>
             </div>
           </div>
         </div>
       </section>
-      
+
       <ServicesWeProvide />
-      
+
       <section className="bg-[#F7F7F9]">
         <Testimonials />
       </section>
-      
+
       <section
         className="py-[7rem]"
         style={{ backgroundImage: `url(${ourValuesBg})` }}
@@ -88,9 +99,12 @@ const AboutUs = () => {
           >
             What We Stand For
           </h2>
-          <p data-aos="fade-up" className="text-white text-center max-w-3xl mx-auto mb-10">
-            We're not big on corporate speak or cookie-cutter approaches. 
-            Here's what actually matters to us:
+          <p
+            data-aos="fade-up"
+            className="text-white text-center max-w-3xl mx-auto mb-10"
+          >
+            We're not big on corporate speak or cookie-cutter approaches. Here's
+            what actually matters to us:
           </p>
           <div className="grid md:grid-cols-4 gap-7 mt-7">
             {[
@@ -132,26 +146,36 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="py-[5rem] bg-white">
         <div className="wrapper">
-          <div data-aos="fade-up" className="text-center mb-12">
-            <h2 className="section-heading mb-6">Who We Are</h2>
-            <p className="max-w-3xl mx-auto text-gray-700">
-              We're a close-knit team made up of developers, designers, strategists, and 
-              marketers — all passionate about their craft. Each of us brings something unique 
-              to the table, but we all share the same mindset: Curious, collaborative, and 
-              committed to doing great work.
-            </p>
-            <p className="max-w-3xl mx-auto text-gray-700 mt-4">
-              Whether we're debugging a complex system, sketching out a user journey, or 
-              brainstorming a digital campaign — we show up fully, give a damn, and take 
-              pride in everything we build.
-            </p>
+          <div className="grid md:grid-cols-2 gap-5 mb-12">
+            <div data-aos="fade-up" className="text-center">
+              <h2 className="section-heading mb-6">Who We Are</h2>
+              <p className="max-w-3xl mx-auto text-gray-700">
+                We're a close-knit team made up of developers, designers,
+                strategists, and marketers — all passionate about their craft.
+                Each of us brings something unique to the table, but we all
+                share the same mindset: Curious, collaborative, and committed to
+                doing great work.
+              </p>
+              <p className="max-w-3xl mx-auto text-gray-700 mt-4">
+                Whether we're debugging a complex system, sketching out a user
+                journey, or brainstorming a digital campaign — we show up fully,
+                give a damn, and take pride in everything we build.
+              </p>
+            </div>
+            <img
+              src="/images/whoweare.webp"
+              alt=""
+              className="w-full aspect-[16/9] rounded-lg object-cover"
+            />
           </div>
-          
+
           <div data-aos="fade-up" className="bg-[#F7F7F9] p-8 rounded-xl">
-            <h3 className="text-2xl font-semibold mb-6">Why Clients Stick With Us</h3>
+            <h3 className="text-2xl font-semibold mb-6">
+              Why Clients Stick With Us
+            </h3>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="flex items-start gap-3">
                 <div className="text-green-500 font-bold text-xl">✓</div>
@@ -163,21 +187,30 @@ const AboutUs = () => {
               </div>
               <div className="flex items-start gap-3">
                 <div className="text-green-500 font-bold text-xl">✓</div>
-                <p>We care just as much about the user experience as the backend code.</p>
+                <p>
+                  We care just as much about the user experience as the backend
+                  code.
+                </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="text-green-500 font-bold text-xl">✓</div>
-                <p>We deliver on time — and we don't disappear when the project is done.</p>
+                <p>
+                  We deliver on time — and we don't disappear when the project
+                  is done.
+                </p>
               </div>
               <div className="flex items-start gap-3 md:col-span-2">
                 <div className="text-green-500 font-bold text-xl">✓</div>
-                <p>We treat every project like it actually matters — because to us, it does.</p>
+                <p>
+                  We treat every project like it actually matters — because to
+                  us, it does.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
+
       <section className="pt-[4rem] wrapper">
         <div
           data-aos="fade-up"
@@ -213,7 +246,8 @@ const AboutUs = () => {
                   Looking Ahead
                 </h4>
                 <p className="text-white text-sm mt-3">
-                  Technology is moving fast — and that's exactly where we like to be.
+                  Technology is moving fast — and that's exactly where we like
+                  to be.
                 </p>
                 <Link
                   to="/contact"
@@ -225,13 +259,15 @@ const AboutUs = () => {
             </div>
             <div className="p-7 h-full text-white bg-[#131426] flex flex-col gap-3">
               <p className="border-b border-dotted border-white/20 pb-3">
-                From AI and automation to cloud-native platforms and IoT, we're excited about what's next.
+                From AI and automation to cloud-native platforms and IoT, we're
+                excited about what's next.
               </p>
               <p className="border-b border-dotted border-white/20 pb-3">
                 We're always ready to help our clients tap into what's possible.
               </p>
               <p className="border-b border-dotted border-white/20 pb-3">
-                We don't claim to have all the answers, but we ask the right questions.
+                We don't claim to have all the answers, but we ask the right
+                questions.
               </p>
               <div className="mt-7 self-end">
                 <Link
@@ -245,11 +281,11 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      
+
       <section className="pt-[4rem]">
         <WorkProcess />
       </section>
-      
+
       <ContactForm />
     </>
   );

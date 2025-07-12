@@ -16,6 +16,7 @@ import Footer from "./components/website/Footer";
 import LandingHeader from "./components/landingPage/LandingHeader";
 import LandingFooter from "./components/landingPage/LandingFooter";
 import { Toaster } from "react-hot-toast";
+import WhatsappButton from "./components/WhatsappButton";
 
 // Lazy loading components
 const Home = lazy(() => import("./pages/Home"));
@@ -42,6 +43,7 @@ function App() {
     <Router>
       <Suspense fallback={<LoadingSpinner />}>
         <SpinnerContextProvider>
+          <WhatsappButton />
           <LoadingSpinnerContext />
           <ScrollToTop />
           <Toaster position="top-center" />

@@ -19,8 +19,8 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const MapComponent = () => {
-  // Use useMemo to memoize the location array
-  const location = useMemo(() => [19.228762, 73.126846], []);
+  // Use useMemo to memoize the location array for Powai
+  const location = useMemo(() => [19.1187, 72.9074], []);
 
   const mapRef = useRef(); // Reference to the map
 
@@ -45,7 +45,7 @@ const MapComponent = () => {
         attribution="© OpenStreetMap contributors"
       />
       <Marker position={location}>
-        <Popup>Your location</Popup>
+        <Popup>Powai, Mumbai</Popup>
       </Marker>
     </MapContainer>
   );

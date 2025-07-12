@@ -67,7 +67,7 @@ const LandingHeader = () => {
             alt="logo"
             width="75"
             height="75"
-            className="h-[3.5rem] lg:h-[5rem] object-contain"
+            className="h-[3.5rem] lg:h-[6rem] object-contain"
           />
         </Scroll>
         <div className="hidden lg:flex items-center gap-10">
@@ -98,7 +98,8 @@ const LandingHeader = () => {
             )
           )}
           <Link
-            to={`https://wa.me/${companyDetails.phone}`}
+            to={`https://wa.me/${companyDetails.phone.replace(/\D/g, "")}`}
+            target="_blank"
             className="primary-btn"
           >
             Let's Chat <i class="fa fa-whatsapp text-xl"></i>

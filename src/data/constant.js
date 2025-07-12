@@ -7,8 +7,8 @@ export { logo };
 export const companyDetails = {
   name: "Byteserve",
   address:
-    " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non voluptatem vero aut earum molestias recusandae.",
-  phone: "+0000000000",
+    "Hiranandani Business Park, Powai, Maharashtra - India",
+  phone: "+918668753480",
   email: "abc@example.com",
 };
 

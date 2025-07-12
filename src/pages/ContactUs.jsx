@@ -121,7 +121,7 @@ const ContactUs = () => {
               </div>
               <div className="space-y-2">
                 <p className="font-semibold">Business Hours</p>
-                <p>Mon - Fri: 9AM - 6PM</p>
+                <p>Mon - Fri: 9AM - 6PM (IST)</p>
               </div>
             </div>
           </div>

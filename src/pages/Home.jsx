@@ -24,8 +24,8 @@ import whyWorkWithUs1 from "../assets/images/whyworkwithus1.png";
 import whyWorkWithUs2 from "../assets/images/whyworkwithus2.png";
 import whyWorkWithUs3 from "../assets/images/whyworkwithus3.png";
 import whyWorkWithUs4 from "../assets/images/whyworkwithus4.png";
-import ceoImage from "../assets/images/aboutus-1.png";
 import { ArrowLinkButton } from "../components/ArrowButtons";
+import bannerThump from "../assets/vids/thumbnail.webp";
 
 const ContactForm = lazy(() => import("../components/ContactForm"));
 const BlogsSection = lazy(() => import("../components/website/BlogsSection"));
@@ -93,6 +93,7 @@ const industries = [
 ];
 
 const Home = () => {
+  const [isBannerLoading, setIsBannerLoading] = React.useState(true);
   return (
     <>
       <section className="relative min-h-screen bg-black/50">
@@ -136,7 +137,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="">
+        {isBannerLoading && (
+          <img
+            src={bannerThump}
+            className="absolute inset-0 object-cover h-full w-full z-[-1] brightness-75"
+            alt=""
+          />
+        )}
+        <div className={isBannerLoading ? "opacity-0" : "opacity-100"}>
           <ReactPlayer
             url={bannerVid}
             playing
@@ -146,6 +154,7 @@ const Home = () => {
             width="100%"
             height="100%"
             className="react-player"
+            onReady={() => setIsBannerLoading(false)}
             style={{
               objectFit: "cover",
               width: "100%",
@@ -256,42 +265,109 @@ const Home = () => {
       <section className="pt-[5rem] lg:pt-[12rem] pb-[5rem] bg-gradient-to-b from-white to-gray-50">
         <div className="wrapper">
           <h2 data-aos="fade-up" className="section-heading text-center mb-8">
-            Our CEO
+            Our CEO & Founders
           </h2>
-          <div className="flex flex-col md:flex-row items-center gap-10">
-            <div data-aos="fade-right" className="md:w-1/3">
-              <div className="relative">
-                <div className="absolute inset-0 bg-primary/10 rounded-full transform translate-x-4 translate-y-4"></div>
-                <img 
-                  src={ceoImage} 
-                  alt="CEO of Byteserve" 
-                  className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover mx-auto relative z-10 shadow-xl"
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Sumit Bramhane Patil */}
+            <div data-aos="fade-up" className="flex flex-col items-center">
+              <div className="relative mb-6">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-full transform translate-x-3 translate-y-3"></div>
+                <img
+                  src={"/images/founder1.webp"}
+                  alt="Mr. Sumit Bramhane Patil"
+                  className="rounded-full w-56 h-56 object-cover relative z-10 shadow-xl border-2 border-white"
                 />
               </div>
-              <div className="flex justify-center gap-4 mt-6">
-                <a href="#" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-all">
-                  <Linkedin className="w-5 h-5 text-primary" />
-                </a>
-                <a href="#" className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-all">
-                  <Twitter className="w-5 h-5 text-primary" />
-                </a>
+              <div className="text-center space-y-3">
+                <h3 className="text-2xl font-bold text-gray-800">
+                  Mr. Sumit Bramhane Patil
+                </h3>
+                <p className="text-primary font-medium">Co-Founder & CEO</p>
+                <div className="space-y-3 text-gray-700 max-w-md mx-auto">
+                  <p>
+                    With a visionary approach to technology and business, Sumit
+                    leads Byteserve's strategic direction and growth
+                    initiatives. His expertise in digital transformation and
+                    business development has been instrumental in establishing
+                    Byteserve as a trusted technology partner.
+                  </p>
+                </div>
+                {/* <div className="flex justify-center gap-4 mt-4">
+                  <a
+                    href="#"
+                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-all"
+                  >
+                    <Linkedin className="w-5 h-5 text-primary" />
+                  </a>
+                  <a
+                    href="#"
+                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-all"
+                  >
+                    <Twitter className="w-5 h-5 text-primary" />
+                  </a>
+                </div> */}
               </div>
             </div>
-            <div data-aos="fade-left" className="md:w-2/3 space-y-4">
-              <h3 className="text-2xl font-bold text-gray-800">John Doe</h3>
-              <p className="text-primary font-medium">Founder & Chief Executive Officer</p>
-              <div className="space-y-4 text-gray-700">
-                <p>
-                  With over 15 years of experience in technology leadership, John brings a wealth of expertise in digital transformation, software development, and business strategy to Byteserve.
-                </p>
-                <p>
-                  Prior to founding Byteserve, John held senior positions at leading tech companies where he led the development of innovative solutions across multiple industries. His vision for Byteserve is to create technology that not only solves complex business challenges but also drives meaningful growth and impact.
-                </p>
-                <p>
-                  John holds a Master's degree in Computer Science and is passionate about leveraging emerging technologies to create sustainable business value. Under his leadership, Byteserve has grown into a trusted technology partner for businesses of all sizes.
-                </p>
+
+            {/* Amit Bramhane Patil */}
+            <div
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="flex flex-col items-center"
+            >
+              <div className="relative mb-6">
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary/30 to-primary/30 rounded-full transform translate-x-3 translate-y-3"></div>
+                <img
+                  src={"/images/founder2.webp"}
+                  alt="Mr. Amit Bramhane Patil"
+                  className="rounded-full w-56 h-56 object-cover relative z-10 shadow-xl border-2 border-white"
+                />
               </div>
-              <Quote className="w-10 h-10 text-primary/20 mt-4" strokeWidth={0} />
+              <div className="text-center space-y-3">
+                <h3 className="text-2xl font-bold text-gray-800">
+                  Mr. Amit Bramhane Patil
+                </h3>
+                <p className="text-primary font-medium">Co-Founder & CTO</p>
+                <div className="space-y-3 text-gray-700 max-w-md mx-auto">
+                  <p>
+                    As the technical visionary behind Byteserve, Amit brings
+                    deep expertise in software architecture and emerging
+                    technologies. His passion for innovation and technical
+                    excellence ensures that Byteserve delivers cutting-edge
+                    solutions that drive real business value.
+                  </p>
+                </div>
+                {/* <div className="flex justify-center gap-4 mt-4">
+                  <a
+                    href="#"
+                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-all"
+                  >
+                    <Linkedin className="w-5 h-5 text-primary" />
+                  </a>
+                  <a
+                    href="#"
+                    className="bg-primary/10 p-3 rounded-full hover:bg-primary/20 transition-all"
+                  >
+                    <Twitter className="w-5 h-5 text-primary" />
+                  </a>
+                </div> */}
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" className="mt-12 text-center">
+            <div className="bg-gradient-to-r from-primary/5 to-secondary/5 p-6 rounded-xl max-w-3xl mx-auto">
+              <Quote
+                className="w-10 h-10 text-primary/30 mx-auto mb-4"
+                strokeWidth={0}
+              />
+              <p className="text-lg italic text-gray-700">
+                "Our mission at Byteserve is to empower businesses through
+                innovative technology solutions that drive growth and create
+                lasting value. We're committed to excellence in everything we
+                do."
+              </p>
+              <p className="mt-4 font-medium text-primary">— The Founders</p>
             </div>
           </div>
         </div>
