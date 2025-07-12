@@ -357,7 +357,7 @@ const LandingPage = ({ page }) => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-20 rounded-full transform translate-x-2 translate-y-2"></div>
                   <img
-                    src={ceoImage}
+                    src={'/images/founder1.webp'}
                     alt="Mr. Sumit Bramhane Patil"
                     className="rounded-full w-48 h-48 object-cover relative z-10 border-4 border-white shadow-xl"
                   />
@@ -402,7 +402,7 @@ const LandingPage = ({ page }) => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-20 rounded-full transform translate-x-2 translate-y-2"></div>
                   <img
-                    src={whyWorkWithUs1}
+                    src={'/images/founder2.webp'}
                     alt="Mr. Amit Bramhane Patil"
                     className="rounded-full w-48 h-48 object-cover relative z-10 border-4 border-white shadow-xl"
                   />
